@@ -1,5 +1,5 @@
+import HoverAnimation from "~/hover-animation/HoverAnimation";
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +9,11 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <div className="container mx-auto bg-[#F7F7F7]">
+      <div className="h-dvh w-full flex items-center justify-center">
+        <HoverAnimation />
+      </div>
+    </div>
+  );
 }
